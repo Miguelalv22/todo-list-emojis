@@ -1,0 +1,9 @@
+.TodoItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.TodoItem button {
+    margin: 0 10px;
+}
