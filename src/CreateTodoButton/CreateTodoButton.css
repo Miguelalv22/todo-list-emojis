@@ -1,12 +1,21 @@
-.CreateTodoButton {
+.create-container button {
     margin-top: 20px;
     height: 4rem;
     width: 4rem;
     background-color: #46d8f9;
     border-radius: 50%;
+    transition: 500ms;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 3rem;
 }
 
-.CreateTodoButton img {
+.create-container .transformed {
+    transition: 500ms;
+    transform: rotate(225deg);
+}
+
+.create-container img {
     display: flex;
     justify-content: center;
 }

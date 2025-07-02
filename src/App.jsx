@@ -1,5 +1,5 @@
-import TodoList from "./TodoList";
-import CreateTodo from "./CreateTodo";
+import TodoList from "./TodoList/TodoList";
+import CreateTodo from "./CreateTodo/CreateTodo";
 import CreateTodoButton from "./CreateTodoButton/CreateTodoButton";
 import './App.css';
 
@@ -11,6 +11,6 @@ function App() {
       <CreateTodoButton />
     </>
   )
-}
+};
 
 export default App;
