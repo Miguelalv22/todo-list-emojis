@@ -1,0 +1,12 @@
+.CreateTodoButton {
+    margin-top: 20px;
+    height: 4rem;
+    width: 4rem;
+    background-color: #46d8f9;
+    border-radius: 50%;
+}
+
+.CreateTodoButton img {
+    display: flex;
+    justify-content: center;
+}

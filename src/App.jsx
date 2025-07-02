@@ -1,22 +1,16 @@
-import TodoTitle from "./TodoTitle"
-import TodoCount from "./TodoCount";
-import SearchBar from "./SearchBar"
-import TodoList from "./TodoList"
-import CreateTodoButton from "./CreateTodoButton"
-import './App.css'
+import TodoList from "./TodoList";
+import CreateTodo from "./CreateTodo";
+import CreateTodoButton from "./CreateTodoButton/CreateTodoButton";
+import './App.css';
 
 function App() {
-
-
   return (
     <>
-      <TodoTitle />
-      <TodoCount />
-      <SearchBar />
       <TodoList />
+      <CreateTodo />
       <CreateTodoButton />
     </>
   )
 }
 
-export default App
+export default App;

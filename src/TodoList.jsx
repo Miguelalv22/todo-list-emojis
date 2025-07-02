@@ -1,4 +1,7 @@
 import TodoItem from "./TodoItem/TodoItem"
+import TodoTitle from "./TodoTitle";
+import TodoCount from "./TodoCount";
+import SearchBar from "./SearchBar";
 
 const todoList = [
     { id: 2, todo: "Hacer la tarea", emoji: "👩‍🔧" },
@@ -10,6 +13,9 @@ const todoList = [
 export default function TodoList() {
     return (
         <div>
+            <TodoTitle />
+            <TodoCount />
+            <SearchBar />
             {
                 todoList.map((item) => {
                     return <TodoItem

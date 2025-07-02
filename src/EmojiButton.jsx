@@ -1,14 +1,16 @@
 export default function EmojiButton() {
-    emojiList = [
+    const emojiList = [
         "🚴‍♀️", "🤾‍♀️", "🛀", "🛌", "👩‍🏫",
         "🍕", "🍅", "✈", "🚗", "🐩",
         "🎉", "📺",
-    ]
+    ];
 
     function randEmoji() {
-        const index = Math.floor(Math.random() * emojiList.length + 1)
+        const index = Math.floor(Math.random() * emojiList.length + 1);
+        return emojiList[index];
     }
+
     return (
-        <button>{emojiList[index]}</button>
+        <button>{randEmoji()}</button>
     )
-}
+};

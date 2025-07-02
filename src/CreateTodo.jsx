@@ -1,13 +1,12 @@
-import EmojiButton from "./emojiButton";
+import TodoLabel from "./TodoLabel";
 import SaveTodoButton from "./SaveTodoButton";
 
-export default function TodoText() {
+export default function CreateTodo() {
     return (
         <div>
-            <label htmlFor="todoText"></label>
-            <EmojiButton />
+            <TodoLabel />
             <textarea name="" id="todoText" cols="30" rows="10"></textarea>
             <SaveTodoButton />
         </div>
     )
-}
+};
