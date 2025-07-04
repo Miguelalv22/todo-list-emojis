@@ -1,7 +1,9 @@
+import { useContext } from "react";
 import TodoItem from "../TodoItem/TodoItem";
 import TodoTitle from "../TodoTitle";
 import TodoCount from "../TodoCount";
 import SearchBar from "../SearchBar";
+import ShowPageContext from "../Context";
 import "./TodoList.css"
 
 const todoList = [
@@ -12,8 +14,10 @@ const todoList = [
 ]
 
 export default function TodoList() {
+    const { showPage } = useContext(ShowPageContext);
+
     return (
-        <div className="TodoList">
+        <div className={showPage == true ? "" : "TodoList"}>
             <TodoTitle />
             <TodoCount />
             <SearchBar />
