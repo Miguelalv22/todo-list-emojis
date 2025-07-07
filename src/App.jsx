@@ -2,7 +2,7 @@ import { useState } from "react";
 import TodoList from "./TodoList/TodoList";
 import CreateTodo from "./CreateTodo/CreateTodo";
 import CreateTodoButton from "./CreateTodoButton/CreateTodoButton";
-import ShowPageContext from "./Context";
+import { ShowPageContext } from "./context/Context";
 import './App.css';
 
 function ShowPageProvider({ children }) {

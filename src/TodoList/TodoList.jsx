@@ -3,7 +3,7 @@ import TodoItem from "../TodoItem/TodoItem";
 import TodoTitle from "../TodoTitle";
 import TodoCount from "../TodoCount";
 import SearchBar from "../SearchBar";
-import ShowPageContext from "../Context";
+import { ShowPageContext } from "../context/Context";
 import "./TodoList.css"
 
 const todoList = [

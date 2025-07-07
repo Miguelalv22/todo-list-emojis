@@ -1,16 +1,19 @@
-export default function EmojiButton() {
+import { useContext } from "react";
+import { EmojiContext } from "./context/Context";
+
+export default function EmojiButton({ }) {
+    const { newValue } = useContext(EmojiContext);
     const emojiList = [
         "🚴‍♀️", "🤾‍♀️", "🛀", "🛌", "👩‍🏫",
         "🍕", "🍅", "✈", "🚗", "🐩",
         "🎉", "📺",
     ];
 
-    function randEmoji() {
-        const index = Math.floor(Math.random() * emojiList.length + 1);
-        return emojiList[index];
-    }
-
     return (
-        <button>{randEmoji()}</button>
+        <select name="selectedEmoji" id="selectEmoji" onChange={newValue}>
+            {emojiList.map((emoji) => (
+                <option key={emoji} value={emoji}>{emoji}</option>
+            ))}
+        </select>
     )
 };
