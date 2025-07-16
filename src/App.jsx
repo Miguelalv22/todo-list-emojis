@@ -13,21 +13,32 @@ const todoList = [
 
 function ShowPageProvider({ children }) {
   const [showPage, setShowPage] = useState(true);
+  const [todos, setTodos] = useState(todoList)
+  const [todoText, setTodoText] = useState("")
+
 
   function toggleShow() {
     setShowPage(!showPage);
+    console.log(todos)
+    setTodoText("")
   };
 
-  function addTodo(emoji) {
-    const todo = document.getElementById('todoText');
-    todoList.push({ id: uuid(), todo: todo.value, emoji: emoji })
-    todo.value = "";
+  function changeTodoText() {
+    const text = document.getElementById('todoText');
+    setTodoText(text.value)
+  }
+
+  function addTodo() {
+    const select = document.getElementById("selectEmoji");
+    console.log(todoText)
+    setTodos(prevTodos => {
+      return [...prevTodos, { id: uuid(), todo: todoText, emoji: select.value }]
+    })
     toggleShow();
   }
 
-
   return (
-    <ShowPageContext.Provider value={{ showPage, toggleShow, addTodo }}>
+    <ShowPageContext.Provider value={{ showPage, toggleShow, addTodo, todos, changeTodoText }}>
       {children}
     </ShowPageContext.Provider>
   )
@@ -37,7 +48,7 @@ function App() {
   return (
     <>
       <ShowPageProvider>
-        <TodoList todoList={todoList} />
+        <TodoList />
         <CreateTodo />
         <CreateTodoButton />
       </ShowPageProvider>

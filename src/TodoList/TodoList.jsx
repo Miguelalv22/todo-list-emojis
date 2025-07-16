@@ -6,8 +6,8 @@ import SearchBar from "../SearchBar";
 import { ShowPageContext } from "../context/Context";
 import "./TodoList.css"
 
-export default function TodoList({ todoList }) {
-    const { showPage } = useContext(ShowPageContext);
+export default function TodoList() {
+    const { showPage, todos } = useContext(ShowPageContext);
 
     return (
         <div className={showPage == true ? "" : "TodoList"}>
@@ -15,7 +15,7 @@ export default function TodoList({ todoList }) {
             <TodoCount />
             <SearchBar />
             {
-                todoList.map((item) => {
+                todos.map((item) => {
                     return <TodoItem
                         key={item.id}
                         todo={item.todo}
