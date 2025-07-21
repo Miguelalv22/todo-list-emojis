@@ -5,7 +5,7 @@ import { ShowPageContext, EmojiContext } from "../context/Context";
 import "./CreateTodo.css";
 
 function EmojiProvider({ children }) {
-    const [emoji, setEmoji] = useState("📺");
+    const [emoji, setEmoji] = useState("🚴‍♀️");
 
     function newValue() {
         const select = document.getElementById("selectEmoji");
@@ -20,18 +20,13 @@ function EmojiProvider({ children }) {
 }
 
 export default function CreateTodo() {
-    const { showPage } = useContext(ShowPageContext);
-    function addTodo(emoji) {
-        const todo = document.getElementById('todoText');
-        console.log(todo.value)
-        console.log(emoji)
-    }
+    const { showPage, addTodo, changeTodoText } = useContext(ShowPageContext);
 
     return (
         <div className={showPage == true ? "CreateTodo" : ""}>
             <EmojiProvider>
                 <TodoLabel />
-                <textarea name="todoText" id="todoText" cols="30" rows="10"></textarea>
+                <textarea name="todoText" id="todoText" cols="30" rows="10" onChange={changeTodoText}></textarea>
                 <SaveTodoButton action={addTodo} />
             </EmojiProvider>
         </div>
