@@ -38,8 +38,14 @@ function ShowPageProvider({ children }) {
     toggleShow();
   }
 
+  function deleteTodo(id) {
+    setTodos((prevTodos) => {
+      return prevTodos.filter((t) => t.id !== id);
+    })
+  }
+
   return (
-    <ShowPageContext.Provider value={{ showPage, toggleShow, addTodo, todos, changeTodoText }}>
+    <ShowPageContext.Provider value={{ showPage, toggleShow, addTodo, deleteTodo, todos, changeTodoText }}>
       {children}
     </ShowPageContext.Provider>
   )
