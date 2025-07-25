@@ -4,7 +4,7 @@ import TodoTitle from "../TodoTitle";
 import TodoCount from "../TodoCount";
 import SearchBar from "../SearchBar";
 import { ShowPageContext } from "../context/Context";
-import "./TodoList.css"
+import "./TodoList.css";
 
 export default function TodoList() {
     const { showPage, todos } = useContext(ShowPageContext);
