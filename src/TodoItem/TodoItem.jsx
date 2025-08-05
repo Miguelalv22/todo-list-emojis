@@ -8,11 +8,11 @@ export default function TodoItem({ id, todo, emoji }) {
     function handleClick() {
         deleteTodo(id)
     }
-
+  
     return (
-        <div className="TodoItem">
+        <li className="TodoItem">
             <p>{todo}</p>
-            <button onClick={handleClick}>{emoji}</button>
-        </div>
+            <button>{emoji}</button>
+        </li>
     )
 }

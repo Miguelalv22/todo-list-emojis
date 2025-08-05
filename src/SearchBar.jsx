@@ -1,5 +1,5 @@
-export default function SearchBar() {
+export default function SearchBar({ searchTodo }) {
     return (
-        <input type="text" />
+        <input id="searchBar" type="search" placeholder="Search To-Do" onChange={searchTodo} />
     )
 }
