@@ -37,6 +37,7 @@ export default function TodoList() {
                         filteredTodos.map((item) => {
                             return <TodoItem
                                 key={item.id}
+                                id={item.id}
                                 todo={item.todo}
                                 emoji={item.emoji} />
                         })
@@ -44,6 +45,7 @@ export default function TodoList() {
                         todos.map((item) => {
                             return <TodoItem
                                 key={item.id}
+                                id={item.id}
                                 todo={item.todo}
                                 emoji={item.emoji} />
                         })
