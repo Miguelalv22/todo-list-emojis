@@ -1,10 +1,10 @@
-import "./TodoItem.css"
+import "./TodoItem.css";
 
 export default function TodoItem({ todo, emoji }) {
     return (
-        <div className="TodoItem">
+        <li className="TodoItem">
             <p>{todo}</p>
             <button>{emoji}</button>
-        </div>
+        </li>
     )
 }
