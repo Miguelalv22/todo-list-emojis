@@ -12,13 +12,20 @@ const getInitialData = () => {
   return data;
 }
 
+const getInitialQuantity = () => {
+  const qty = (JSON.parse(localStorage.todos)).length;
+  return qty;
+}
+
 function ShowPageProvider({ children }) {
   const [showPage, setShowPage] = useState(true);
   const [todos, setTodos] = useState(getInitialData);
   const [todoText, setTodoText] = useState("");
+  const [qtyTodos, setQtyTodos] = useState(getInitialQuantity);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
+    setQtyTodos((JSON.parse(localStorage.todos)).length);
   }, [todos]);
 
   function toggleShow() {
@@ -45,7 +52,7 @@ function ShowPageProvider({ children }) {
   }
 
   return (
-    <ShowPageContext.Provider value={{ showPage, toggleShow, addTodo, deleteTodo, todos, changeTodoText }}>
+    <ShowPageContext.Provider value={{ showPage, toggleShow, addTodo, deleteTodo, todos, qtyTodos, changeTodoText }}>
       {children}
     </ShowPageContext.Provider>
   )

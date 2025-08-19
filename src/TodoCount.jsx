@@ -1,3 +1,3 @@
-export default function TodoCount() {
-    return <p>7</p>
+export default function TodoCount({ qtyTodos }) {
+    return <p>{qtyTodos}</p>
 }
