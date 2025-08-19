@@ -7,7 +7,7 @@ import { ShowPageContext } from "../context/Context";
 import "./TodoList.css";
 
 export default function TodoList() {
-    const { showPage, todos } = useContext(ShowPageContext);
+    const { showPage, todos, qtyTodos } = useContext(ShowPageContext);
     const [filteredTodos, setFilteredTodos] = useState([]);
     const [text, setText] = useState('');
 
@@ -29,7 +29,7 @@ export default function TodoList() {
     return (
         <div className={showPage == true ? "" : "TodoList"}>
             <TodoTitle />
-            <TodoCount />
+            <TodoCount qtyTodos={qtyTodos} />
             <SearchBar searchTodo={searchTodo} />
             <ul>
                 {
