@@ -1,4 +1,4 @@
-
+import './TodoTitle.css';
 
 export default function TodoTitle() {
     return (
