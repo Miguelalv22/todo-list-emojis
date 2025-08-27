@@ -1,0 +1,8 @@
+.TodoCount p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.TodoCount span {
+    color: #fc5203;
+}

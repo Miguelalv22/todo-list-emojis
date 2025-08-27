@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import TodoItem from "../TodoItem/TodoItem";
-import TodoTitle from "../TodoTitle";
-import TodoCount from "../TodoCount";
-import SearchBar from "../SearchBar";
+import TodoTitle from "../TodoTitle/TodoTitle";
+import TodoCount from "../TodoCount/TodoCount";
+import SearchBar from "../SearchBar/SearchBar";
 import { ShowPageContext } from "../context/Context";
 import "./TodoList.css";
 

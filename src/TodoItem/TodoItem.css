@@ -1,9 +1,25 @@
 .TodoItem {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: rgba(16, 13, 13, 0.6) 0 1px 5px;
+}
+
+.TodoItem p {
+    text-align: start;
 }
 
 .TodoItem button {
-    margin: 0 10px;
+    padding: 0;
+    min-width: 4rem;
+    max-height: 4rem;
+    background-color: #f0f0f0;
+    box-shadow: rgba(0, 0, 0, 0.6) 0 1px 5px;
+}
+
+.TodoItem button:hover {
+    border: 3px solid #0074ff96;
 }
