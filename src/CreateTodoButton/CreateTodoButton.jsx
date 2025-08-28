@@ -17,7 +17,7 @@ export default function CreateTodoButton() {
     };
 
     return (
-        <div className="create-container">
+        <div className="CreateTodoButton">
             <button className={styleClass == true ? "transformed" : ""}
                 onClick={handleClick}
             >
