@@ -27,7 +27,7 @@ export default function TodoList() {
     }, [text]);
 
     return (
-        <div className={showPage == true ? "" : "TodoList"}>
+        <div className={showPage == true ? "" : "display"}>
             <TodoTitle />
             <TodoCount qtyTodos={qtyTodos} />
             <SearchBar searchTodo={searchTodo} />

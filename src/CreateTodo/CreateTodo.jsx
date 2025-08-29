@@ -23,12 +23,15 @@ export default function CreateTodo() {
     const { showPage, addTodo, changeTodoText } = useContext(ShowPageContext);
 
     return (
-        <div className={showPage == true ? "CreateTodo" : ""}>
+        <div className={showPage == true ? "display CreateTodo" : "CreateTodo"
+        }>
             <EmojiProvider>
                 <TodoLabel />
-                <textarea name="todoText" id="todoText" cols="30" rows="10" onChange={changeTodoText}></textarea>
+                <textarea name="todoText" id="todoText" cols="30" rows="10"
+                    placeholder="Type your task."
+                    onChange={changeTodoText}></textarea>
                 <SaveTodoButton action={addTodo} />
             </EmojiProvider>
-        </div>
+        </div >
     )
 };

@@ -1,3 +1,20 @@
-.CreateTodo {
+.display {
     display: none;
+}
+
+.CreateTodo textarea {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    height: 150px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 3px solid #f0f0f0;
+    border-radius: 5px;
+    resize: none;
+    box-shadow: 0 5px 5px rgba(16, 13, 13, 0.8);
+}
+
+.CreateTodo textarea:focus {
+    outline: 3px solid #469ff9;
 }

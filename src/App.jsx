@@ -42,6 +42,8 @@ function ShowPageProvider({ children }) {
     setTodos(prevTodos => {
       return [...prevTodos, { id: uuid(), todo: todoText, emoji: select.value }];
     })
+    const text = document.getElementById('todoText');
+    text.value = ''
     toggleShow();
   }
 
