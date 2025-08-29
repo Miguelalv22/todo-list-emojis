@@ -22,6 +22,7 @@ function ShowPageProvider({ children }) {
   const [todos, setTodos] = useState(getInitialData);
   const [todoText, setTodoText] = useState("");
   const [qtyTodos, setQtyTodos] = useState(getInitialQuantity);
+  const [styleClass, setStyleClass] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -37,13 +38,19 @@ function ShowPageProvider({ children }) {
     setTodoText(text.value);
   };
 
+  function changeStyle() {
+    setStyleClass(!styleClass);
+  };
+
   function addTodo() {
     const select = document.getElementById("selectEmoji");
     setTodos(prevTodos => {
       return [...prevTodos, { id: uuid(), todo: todoText, emoji: select.value }];
     })
     const text = document.getElementById('todoText');
-    text.value = ''
+    text.value = '';
+    setTodoText(text.value);
+    changeStyle();
     toggleShow();
   }
 
@@ -54,7 +61,7 @@ function ShowPageProvider({ children }) {
   }
 
   return (
-    <ShowPageContext.Provider value={{ showPage, toggleShow, addTodo, deleteTodo, todos, qtyTodos, changeTodoText }}>
+    <ShowPageContext.Provider value={{ showPage, toggleShow, addTodo, deleteTodo, todos, qtyTodos, changeTodoText, changeStyle, styleClass }}>
       {children}
     </ShowPageContext.Provider>
   )

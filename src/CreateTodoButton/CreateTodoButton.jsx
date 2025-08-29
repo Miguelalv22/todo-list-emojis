@@ -3,13 +3,7 @@ import { ShowPageContext } from "../context/Context";
 import "./CreateTodoButton.css";
 
 export default function CreateTodoButton() {
-    const { toggleShow } = useContext(ShowPageContext);
-
-    const [styleClass, setStyleClass] = useState(false);
-
-    function changeStyle() {
-        setStyleClass(!styleClass);
-    }
+    const { toggleShow, changeStyle, styleClass } = useContext(ShowPageContext);
 
     function handleClick() {
         changeStyle();
