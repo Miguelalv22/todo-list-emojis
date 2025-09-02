@@ -3,13 +3,7 @@ import { ShowPageContext } from "../context/Context";
 import "./CreateTodoButton.css";
 
 export default function CreateTodoButton() {
-    const { toggleShow } = useContext(ShowPageContext);
-
-    const [styleClass, setStyleClass] = useState(false);
-
-    function changeStyle() {
-        setStyleClass(!styleClass);
-    }
+    const { toggleShow, changeStyle, styleClass } = useContext(ShowPageContext);
 
     function handleClick() {
         changeStyle();
@@ -17,7 +11,7 @@ export default function CreateTodoButton() {
     };
 
     return (
-        <div className="create-container">
+        <div className="CreateTodoButton">
             <button className={styleClass == true ? "transformed" : ""}
                 onClick={handleClick}
             >

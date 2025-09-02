@@ -1,21 +1,38 @@
-.create-container button {
-    margin-top: 20px;
+.CreateTodoButton button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4rem;
     width: 4rem;
     background-color: #46d8f9;
+    border: 2px solid #469ff9;
     border-radius: 50%;
-    transition: 500ms;
     position: fixed;
-    bottom: 2.5rem;
-    right: 3rem;
+    bottom: 1rem;
+    right: calc(50% - 2rem);
+    transition: 500ms;
 }
 
-.create-container .transformed {
+.CreateTodoButton button:focus {
+    outline: none;
+}
+
+.CreateTodoButton .transformed {
     transition: 500ms;
     transform: rotate(225deg);
 }
 
-.create-container img {
-    display: flex;
-    justify-content: center;
+.CreateTodoButton img {
+    width: 30px;
+    height: 30px;
+    padding: 100%;
+    border-radius: 50%;
+}
+
+.CreateTodoButton img:hover {
+    border: 3px solid #007bf5;
+}
+
+.CreateTodoButton img:active {
+    background-color: #469ff9;
 }

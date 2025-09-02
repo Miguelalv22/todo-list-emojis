@@ -1,0 +1,17 @@
+.SaveTodoButton button {
+    box-shadow: rgba(0, 0, 0, 0.6) 0 1px 5px;
+    margin: 20px 0;
+}
+
+.SaveTodoButton button:hover {
+    border: 3px solid #0074ff96;
+}
+
+.SaveTodoButton button:focus {
+    outline: none;
+}
+
+.SaveTodoButton button:active {
+    color: white;
+    background-color: #469ff9;
+}
