@@ -7,9 +7,12 @@ import { ShowPageContext } from "./context/Context";
 import './App.css';
 
 const getInitialData = () => {
-  const data = JSON.parse(localStorage.getItem("todos"));
-  if (!data) return [];
-  return data;
+  if (JSON.parse(localStorage.getItem("todos")) == undefined) {
+    return [];
+  } else {
+    const data = JSON.parse(localStorage.getItem("todos"));
+    return data;
+  }
 }
 
 const getInitialQuantity = () => {
