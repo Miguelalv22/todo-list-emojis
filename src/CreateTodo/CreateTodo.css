@@ -1,5 +1,7 @@
-.display {
-    display: none;
+.CreateTodo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .CreateTodo textarea {
@@ -17,4 +19,8 @@
 
 .CreateTodo textarea:focus {
     outline: 3px solid #469ff9;
+}
+
+.display {
+    display: none;
 }

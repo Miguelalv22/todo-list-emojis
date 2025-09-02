@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import TodoLabel from "../TodoLabel";
+import EmojiButton from "./../EmojiButton/EmojiButton";
 import SaveTodoButton from "../SaveTodoButton/SaveTodoButton";
 import { ShowPageContext, EmojiContext } from "../context/Context";
 import "./CreateTodo.css";
@@ -26,7 +26,7 @@ export default function CreateTodo() {
         <div className={showPage == true ? "display CreateTodo" : "CreateTodo"
         }>
             <EmojiProvider>
-                <TodoLabel />
+                <EmojiButton />
                 <textarea name="todoText" id="todoText" cols="30" rows="10"
                     placeholder="Type your task."
                     onChange={changeTodoText}></textarea>
