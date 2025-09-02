@@ -16,8 +16,12 @@ const getInitialData = () => {
 }
 
 const getInitialQuantity = () => {
-  const qty = (JSON.parse(localStorage.todos)).length;
-  return qty;
+  if ((JSON.parse(localStorage.todos)).length == undefined) {
+    const qty = 0;
+  } else {
+    const qty = (JSON.parse(localStorage.todos)).length;
+    return qty;
+  }
 }
 
 function ShowPageProvider({ children }) {
