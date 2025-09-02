@@ -16,7 +16,7 @@ const getInitialData = () => {
 }
 
 const getInitialQuantity = () => {
-  if ((JSON.parse(localStorage.todos)).length == undefined) {
+  if (JSON.parse(localStorage.todos) == undefined) {
     const qty = 0;
     return qty;
   } else {
